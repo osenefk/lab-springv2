@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" default-autowire="byName">
+
+
+	
+	<bean id="dao" class="com.objis.springinject.dao.ClientDaoImpl" />
+	
+	<bean id="service" class="com.objis.springinject.service.ClientService" autowire="byName" />
+	<!-- Ici, Spring va chercher un bean dont son nom correspond à l'id du bean 
+		déclaré dans le fichier de configuration (dao) de spring et va l'injecter. -->
+	
+
+</beans>
